@@ -26,6 +26,12 @@ gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
 
 
+#admin panal
+gem 'activeadmin'
+gem 'cancancan'
+gem 'draper'
+
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
