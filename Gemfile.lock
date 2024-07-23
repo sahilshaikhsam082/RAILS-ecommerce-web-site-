@@ -129,6 +129,8 @@ GEM
       ruby2_keywords
     erubi (1.13.0)
     execjs (2.9.1)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     ffi (1.17.0-x86_64-darwin)
     formtastic (5.0.0)
       actionpack (>= 6.0.0)
@@ -320,9 +322,11 @@ DEPENDENCIES
   debug
   devise
   draper
+  faker
   importmap-rails
   jbuilder
   jquery-rails
+  kaminari
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.4)
   redis (~> 4.0)

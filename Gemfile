@@ -35,6 +35,15 @@ gem 'draper'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
+#fake data
+gem 'faker'
+
+#pagination
+gem 'kaminari'
+
+#bootstrap for frontend 
+gem 'bootstrap', '~> 5.1.0'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 

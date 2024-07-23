@@ -5,5 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# User.find_or_create_by(email: 'admin@example.com', password: 'password', password_confirmation: 'password',admin: true) if Rails.env.development?
 
+# db/seeds.rb
+categories = ["Electronics", "Books", "Clothing", "Home Appliances"]
+
+30.times do
+  Product.create(
+    name: Faker::Commerce.product_name,
+    description: Faker::Lorem.paragraph,
+    price: Faker::Commerce.price(range: 10.0..1000.0),
+    category: categories.sample,
+    on_sale: [true, false].sample,
+    new: [true, false].sample
+  )
+end
