@@ -1,0 +1,230 @@
+// products.scss
+
+// General styles
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+// Sidebar styles
+.sidebar {
+  position: fixed;
+  right: -300px; // Hidden by default
+  top: 60;
+  width: 300px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+// Toggle button styles
+#toggle-sidebar {
+  position: fixed;
+  right: 5px;
+  top: 200px;
+  z-index: 1100;
+}
+
+// Form styles inside sidebar
+.sidebar .form-group {
+  margin-bottom: 1rem;
+
+  .form-control {
+    width: 100%;
+  }
+}
+
+// Form button styles
+.sidebar .btn {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+// Card styles
+.card {
+  display: flex;
+  flex-direction: column;
+
+  .card-img-top {
+    background-color: #f8f9fa;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .img-fluid {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .no-image {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+  }
+
+  .card-body {
+    flex: 1;
+  }
+
+  .card-footer {
+    text-align: center;
+    margin-top: auto;
+
+    .btn-action {
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      color: #ffffff;
+      text-decoration: none;
+      border: none;
+      display: inline-block;
+      margin-bottom: 10px;
+
+      &.btn-success {
+        background-color: #28a745;
+      }
+
+      &.btn-secondary {
+        background-color: #6c757d;
+      }
+    }
+  }
+}
+
+// Go to cart button styles
+.btn-cart {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #6c757d;
+  border: none;
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid #e0e0e0; /* Light grey border for cards */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure no overflow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #ffffff; /* White background for the card */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+  transform: translateY(-4px); /* Lift card on hover */
+}
+
+.card-img-top {
+  height: 200px; /* Fixed height for image */
+  object-fit: cover; /* Cover image to fill container */
+  background-color: #f9f9f9; /* Light grey background if no image */
+}
+
+.card-body {
+  padding: 20px; /* Padding inside card body */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Font size for card title */
+  color: #333; /* Dark text color for contrast */
+  margin-bottom: 0.5rem; /* Spacing below title */
+}
+
+.card-text {
+  color: #666; /* Slightly lighter text color for content */
+  margin-bottom: 1rem; /* Spacing below text */
+}
+
+.card-footer {
+  padding: 10px 20px; /* Padding inside card footer */
+  background-color: #f9f9f9; /* Light grey background for footer */
+  text-align: center; /* Center-align footer content */
+}
+
+.btn {
+  padding: 12px 20px; /* Padding for buttons */
+  font-size: 1.2rem; /* Font size for buttons */
+  border-radius: 5px; /* Rounded corners for buttons */
+  color: #ffffff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.btn-success {
+  background-color: #a5d6a7; /* Very subtle green background */
+  border: none; /* Remove border */
+}
+
+.btn-success:hover {
+  background-color: #88c9a5; /* Slightly darker green on hover */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Grey background for secondary buttons */
+  border: none; /* Remove border */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}
+
+
+/* Styles for Product Image */
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease; /* Smooth transformation */
+}
+
+/* Keyframe animation for rotation */
+@keyframes rotateYAnimation {
+  from {
+    transform: rotateY(1deg) translateY(-10px);
+  }
+  to {
+    transform: rotateY(360deg) translateY(-10px);
+  }
+}
+
+/* Apply the animation on hover */
+.product-image:hover {
+  animation: rotateYAnimation 1.5s forwards; /* Rotate from 1 to 360 degrees */
+}
+
+/* Ensure the image covers the area */
+.product-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
